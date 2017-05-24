@@ -1,0 +1,541 @@
+DB45F00DC412A933FB6CCE6CCE00F777FF37E003A61AB471C466D402FA2CC526886D8C6CC10BD825C76E9A61F528F20EF757C427C210C803C7319667C031E818C831F21ADE48B42DC273E7219969F706E45A9600A25AFB29E57AD20CC14CF337C852EF12D72CC128C733C516F713C632E233ED18EE37EB71F737C536D112D477C249DB2EF728FB27874AEB17C351C678E1758816F333EA1BF248AE5EE031EE29E350C53AD72DCC22D0759E69
+
+
+视频高清加密！！！目前已更新完毕，完全版视频教程，部分目录如下：
+
+L001老男孩教育-Python12期VIP视频全新启航
+│      0001-开课介绍.rar
+│      0002-同学互相介绍.rar
+│      0003-python简史介绍.rar
+│      0004-python3的新特性.rar
+│      0005-开发工具ide介绍.rar
+│      0006-helloworld程序.rar
+│      0007-变量与赋值.rar
+│      0008-用户交互.rar
+│      0009-条件判断与缩进.rar
+│      0010-循环控制.rar
+│      0011-循环次数限制.rar
+│      0012-常用数据类型.rar
+│      0013-字符串格式化.rar
+│      0014-列表常用操作.rar
+│      0015-列表的后续操作.rar
+│      0016-二进制位运算.rar
+│      0017-简单的嵌套循环.rar
+│      0018-文件基本操作及作业.rar
+　L002老男孩教育-Python12期VIP视频
+│      001-上周作业简介.rar
+│      002-上周作业实现原理.rar
+│      003-今日内容概要.rar
+│      004-python介绍.rar
+│      005-python编码.rar
+│      006-接收执行参数.rar
+│      007-python字符串原理剖析.rar
+│      008-基本数据类型常用方法.rar
+│      009-上周作业实例分析.rar
+│      0010-python主文件判断.rar
+│      0011-一切事物都是对象.rar
+│      0012-int内部功能介绍.rar
+│      0013-float和long内部功能介绍.rar
+│      0014-str内部功能介绍一.rar
+│      0015-str内部功能介绍二.rar
+│      0016-上下文管理剖析.rar
+│      0017-list内部功能介绍.rar
+│      0018-tuple和dict内部功能介绍.rar
+│      0019-字典和列表课上练习题.rar
+│      0020-今日作业.rar
+　L003老男孩教育-Python12期VIP视频
+│      001-上节作业情况.rar
+│      002-上节作业奖惩.rar
+│      003-本节内容概要.rar
+│      004-上节内容回顾.rar
+│      005-上节内容回顾.rar
+│      006-python集合set（二）.rar
+│      007-python计数器counter.rar
+│      008-python有序字典ordereddict.rar
+│      009-python默认字典defaultdict.rar
+│      0010-Python可命名元祖namedtuple.rar
+│      0011-python双向队列deque.rar
+│      0012-python单项队列queue.queue.rar
+│      0013-python深浅拷贝原理.rar
+│      0014-python深浅拷贝应用.rar
+│      0015-python函数的基本定义.rar
+│      0016-python函数的返回值（一）.rar
+│      0017-python函数的返回值（二）.rar
+│      0018-python函数的普通参数.rar
+│      0019-python函数的默认参数.rar
+│      0020-python函数的动态参数（一）.rar
+│      0021-python函数的动态参数（二）.rar
+│      0022-使用动态参数实现字符串格式化.rar
+│      0023-pythonlambda表达式.rar
+│      0024-python内置函数（一）.rar
+│      0025-python内置函数（二）.rar
+│      0026-python文件操作.rar
+│      0027-python本节作业（一）.rar
+│      0028-python本节作业（二）.rar
+　L004老男孩教育-Python12期VIP视频
+│      001-上节作业.rar
+│      002-论中美差距.rar
+│      003-tenglan讲作业思路.rar
+│      004-tenglan回顾上节内容.rar
+│      005-迭代器原理及使用.rar
+│      006-生成器的使用.rar
+│      007-使用yield实现单线程中的异步并发效果.rar
+│      008-装饰器原理介绍和基本实现.rar
+│      009-装饰器实现.rar
+│      0010-实现带参数的复杂装饰器.rar
+│      0011-递归原理及实现.rar
+│      0012-通过递归实现斐波那契数列.rar
+│      0013-算法基础之二分查找.rar
+│      0014-算法基础之2维数组90度旋转.rar
+│      0015-正则表达式基础及计算器作业思路及要求.rar
+　L005老男孩教育-Python12期VIP视频
+│      001-鸡汤之超越别人的期待.rar
+│      002-上节作业.rar
+│      003-上节内容回顾.rar
+│      004-上节内容回顾2.rar
+│      005-上节作业之计算器讲解.rar
+│      006-正则表达式深入.rar
+│      007-算法基础之冒泡排序.rar
+│      008-时间复杂度介绍.rar
+│      009-模块介绍.rar
+│      0010-如何自定义模块.rar
+│      0011-不同目录之前的模块调用.rar
+│      0012-atmhomeworkrequirments.rar
+　L006老男孩教育-Python12期VIP视频
+│      001-some鸡汤.rar
+│      002-some鸡汤.rar
+│      003-atm示例代码展示.rar
+│      004-常用模块之shutil.rar
+│      005-常用模块之shelve.rar
+│      006-常用模块之xml处理.rar
+│      007-常用模块之configparser.rar
+│      008-常用模块之hashlib.rar
+│      009-常用模块之subprocess.rar
+│      0010-常用模块之logging.rar
+│      011-面向对象介绍.rar
+│      012-面向对象之类和构造方法.rar
+│      013-面向对象之类变量与实例变量.rar
+│      014-面向对象之类的继承.rar
+│      015-面向对象之模拟人生作业.rar
+　L007老男孩教育-Python12期VIP视频
+│      01-上节作业.rar
+│      02-鸡汤之beanewgentlemen.rar
+│      03-面向对象回顾.rar
+│      04-类的静态方法类方法及属性.rar
+│      05-新式类与经典类.rar
+│      06-面向对象特性之多态.rar
+│      07-反射的妙用.rar
+│      08-socket基础.rar
+│      09-socket连续交互通信.rar
+│      010-python3的socket坑(可能是加密过的文件，请核实).rar
+│      012-通过socket模拟实现简单的ssh功能.rar
+│      013-通过socket实现大数据的传输.rar
+│      014-通过socket实现大数据的传输2.rar
+│      015-通过socket实现大数据的传输及本周ftp开发作业.rar
+　L008老男孩教育-Python12期VIP视频
+│      01-上节作业.rar
+│      02-鸡汤与电影.rar
+│      03-上节内容回顾.rar
+│      04-socket常用语法.rar
+│      05-socketserver实例.rar
+│      06-多并发ftpserver代码示例讲解.rar
+│      07-午后鸡汤.rar
+│      08-异常处理.rar
+│      09-自定义异常与断言.rar
+│      010-cpu运行原理与多线程.rar
+│      011-pythongil介绍与影响.rar
+│      012-多线程实例.rar
+│      013-守护线程与join.rar
+│      014-gil与多线程锁的关系.rar
+│      015-递归锁与信号量.rar
+│      016-线程间同步和交互.rar
+│      017-多进程实例.rar
+│      018-进程间通讯和数据共享.rar
+│      019-进程池代码.rar
+│      020-paramiko简单讲解及作业需求.rar
+　L009老男孩教育-Python12期VIP视频
+│      01-鸡汤之只能当配角的人生是悲惨的.rar
+│      02-上节内容回顾.rar
+│      03-队列queue.rar
+│      04-生产者消费者模型.rar
+│      05-生产者消费者模型再捋一捋.rar
+│      06-协程初探.rar
+│      07-协程异步非阻塞.rar
+│      08-论事件驱动与异步io模型.rar
+│      09-selectpollepoll异步io模型剖析.rar
+│      010-select异步io模型剖析代码实例.mp4.rar
+│      011-paramiko讲解.rar
+│      012-mysql常用操作.rar
+│      013-pythonmysqlapi常用调用及回滚和事务操作.rar
+│      014-本周作业.rar
+　L010老男孩教育-Python12期VIP视频
+│      01-上节作业回顾.rar
+│      02-再回顾select.rar
+│      03-再回顾select2.rar
+│      04-事件驱动.rar
+│      05-twisted构架介绍.rar
+│      06-twisted简单文件异步传输.rar
+│      07-午后鸡汤.rar
+│      08-redis介绍及常用操作.rar
+│      09-redis发布与订阅.rar
+│      010-rabbitmq介绍与使用.rar
+│      011-rabbitmq常用使用场景.rar
+│      012-rabbitmq实现rpccall及作业需求.rar
+　L011老男孩教育-Python12期VIP视频
+│      01上节内容回顾.rar
+│      02sqlalchemyorm介绍与使用.rar
+│      03sqlalchemy外键关联.rar
+│      04sqlalchemy多对多关联.rar
+│      05sqlalchemy关联join查询.rar
+│      06sqlalchemy中进行关联查询.rar
+│      07堡垒机的开发需求介绍.rar
+│      08通过paramiko纪录用户操作日志.rar
+│      09设计堡垒机表结构且进行项目实例展示.rar
+　L012老男孩教育-Python12期VIP视频
+│      01-上节回顾.rar
+│      02-鸡汤..rar
+│      03-python.rar
+│      04-前端内容前瞻.rar
+│      05-本节可见介绍.rar
+│      06-http请求中如何是用html.rar
+│      07-html文件的基本结构.rar
+│      08-html结构之head.rar
+│      09-html结构之head2.rar
+│      010-html标签之标签分类、符号、p已经br标签.rar
+│      011-html标签之a标签.rar
+│      012-html标签之select标签.rar
+│      013-html标签之input系列和form标签.rar
+│      014-html标签之label和列表标签.rar
+│      015-html标签之tabel标签.rar
+│      016-html标签梳理和实例.rar
+│      017-作业一.rar
+│      018-css样式存在位置.rar
+│      019-css之基本选择器.rar
+│      020-css之其他选择器.rar
+│      021-css之backgroud属性.rar
+│      022-css之border属性.rar
+│      023-css之display属性.rar
+│      024-css之cursor属性.rar
+│      025-css之float属性.rar
+│      026-css之float属性2.rar
+│      027-css之position属性.rar
+│      028-css之透明度和层级.rar
+│      029-css之padding和margin属性.rar
+│      030-作业二.rar
+　L013老男孩教育-Python12期VIP视频
+│      01-前端内容概要.rar
+│      02-今日内容介绍.rar
+│      03-javascript代码存在形式以及存放位置.rar
+│      04-javascript声明变量.rar
+│      05-javascript数据类型之数字.rar
+│      06-javascript数据类型之字符串.rar
+│      07-javascript数据类型之数组和字典.rar
+│      08-javascript序列化和反序列化.rar
+│      09-javascript两种for循环.rar
+│      010-javascript条件语句和异常处理.rar
+│      011-javascript函数.rar
+│      012-javascript面向对象.rar
+│      013-今日作业.rar
+│      014-dom编程之选择器.rar
+│      015-dom编程之自增数字实例.rar
+│      016-dom编程之操作文本内容.rar
+│      017-dom编程之事件和搜索框实例.rar
+│      018-dom编程之创建标签.rar
+│      019-dom编程之操作标签属性.rar
+│      020-dom编程之提交表单.rar
+│      021-dom编程之组织表单默认行为.rar
+│      022-dom编程之定时器和跑马灯实例.rar
+│      023-jquery简介.rar
+│      024-jquery之基本选择器.rar
+│      025-jquery之选择器和筛选器.rar
+│      026-jquery之左侧菜单实例.rar
+│      027-今日作业.rar
+　L014老男孩教育-Python12期VIP视频
+│      028-鸡汤之泰国归来和600w哥.rar
+│      029-课前小实例：tab菜单.rar
+│      030-课前小实例：tab菜单2.rar
+│      031-jquery之属性操作.rar
+│      032-jquery实例：全选反选取消.rar
+│      033-jquery之for循环.rar
+│      034-jquery之内容操作.rar
+│      035-jquery实例：返回顶部.rar
+│      036-jquery实例：返回顶部2.rar
+│      037-jquery之位置操作和滚动菜单实例.rar
+│      038-jquery实例：滚动菜单.rar
+│      039-jquery之文本操作.rar
+│      040-jquery之事件(可能是加密过的文件，请核实).rar
+│      041-jquery实例：拖动面板.rar
+│      042-jquery之本域ajax请求.rar
+│      043-jquery之跨域ajax请求和电视节目实例.rar
+│      044-jquery之ajax请求总结.rar
+│      045-jquery之扩展方法.rar
+│      046-本节作业.rar
+　L015老男孩教育-Python12期VIP视频
+│      01-alex鸡汤预测.rar
+│      02-今日内容介绍.rar
+│      03-编辑行实例之功能分析.rar
+│      04-编辑行实例之数据行进入编辑模式分析.rar
+│      05-编辑行实例之数据行进入编辑模式代码剖析.rar
+│      06-编辑行实例之数据行退出编辑模式.rar
+│      07-编辑行实例之单行事件绑定.rar
+│      08-编辑行实例之批量修改内容.rar
+│      09-jquery插件之验证、图片轮播和图标.rar
+│      010-jquery插件之jqueryui和easyui.rar
+│      011-bootstrap介绍.rar
+│      012-css内容补充之伪类.rar
+│      013-伪类实例：返回顶部终极版.rar
+│      014-bootstrap介绍2.rar
+│      015-css内容补充之无法被覆盖.rar
+│      016-前端内容总结和安排.rar
+│      017-自定义web框架.rar
+│      018-自定义web框架2.rar
+│      018-自定义web框架3.rar
+│      019-自定义web框架4.rar
+│      020-django基础之创建程序.rar
+│      021-django基础之基本请求流程.rar
+│      022-django基础之admin功能前瞻.rar
+│      023-django基础之路由系统.rar
+│      024-django基础之数据库增删改查.rar
+│      025-django基础之展示后台数据.rar
+│      026-django基础之静态文件的配置.rar
+│      027-django基础之创建数据.rar
+│      028-今日作业以及知识分析.rar
+　L016老男孩教育-Python12期VIP视频
+│      01-本节鸡汤.rar
+│      02-djangomtv架构讲解.rar
+│      03-djangourl常用匹配语法.rar
+│      04-djangourl常用匹配语法2.rar
+│      05-djangourl常用匹配语法3.rar
+│      06-djangoget和post请求方法.rar
+│      07-djangotemplate渲染.rar
+│      08-djangotemplate动态显示数据.rar
+│      09-djangotemplate常用语法学习.rar
+│      010-djangotemplate模版继承和复用.rar
+│      011-django配置使用数据库.rar
+│      012-djangoorm常用语法.rar
+│      013-djangoorm常用字段.rar
+│      014-djangoadmin创建数据库数据.rar
+│      015-django增册改查命令.rar
+│      
+L017老男孩教育-Python12期VIP视频
+        0001-本节鸡汤.rar
+        0002-算法概要.rar
+        0003-时间复杂度.rar
+        0004-冒泡排序.rar
+        0005-选择排序.rar
+        0006-选择排序优化版.rar
+        0007-插入排序.rar
+        0008-快速排序.rar
+        0009-快速排序2.rar
+        0010-快速排序.rar
+        0011-二叉树.rar
+        0012-二叉树遍历.rar
+        0013-堆排序介绍.rar
+L018老男孩教育-Python12期VIP视频
+        0014-上节回顾.rar
+        0015-form表单.rar
+        0016-form表单定制.rar
+        0017-modelform.rar
+        0018-admin定制.rar
+        0019-AdminActions.rar
+        0020-admin定制2.rar
+        0021-orm操作进阶.rar
+        0022-在自己写的脚本里调用djangomodels.rar
+        0023-orm增删改查.rar
+        0024-orm增删改查2.rar
+        0025-ORM增删改查缓存.rar
+        0026-ormq语句.rar
+        0027-orm聚合查询.rar
+        0028-ORM聚合查询2.rar
+        0029-练习项目之学员管理系统开发.rar
+        0030-用户认证及onetoonefield.rar
+        0031-创建及设计学员系统表结构.rar
+        0032-用户认证的实现.rar
+        0033-退出用户及作业需求.rar
+L019老男孩教育-Python12期VIP视频
+        0034-学员管理系统表结构设计.rar
+        0035-学员管理系统表结构设计2.rar
+        0036-学员管理系统表结构设计3.rar
+        0037-Django中引用bootstrap.rar
+        0038-前端展示用户列表.rar
+        0039-分页功能.rar
+        0040-分页功能2.rar
+        0041-分页功能优化.rar
+        0042-充分使用modelform.rar
+        0043-使用ModelForm修改数据库数据.rar
+        0044-通用权限系统的设计思路.rar
+        0045-通用权限系统的设计思路2.rar
+        0046-通用权限系统的设计思路及实现.rar
+        0047-通用权限系统的代码实现及作业需求.rar
+
+
+├─0048-项目实战之bbs开发介绍.avi
+├─0049-项目实战之bbs设计表结构.avi
+├─0050-项目实战之bbs配置admin.avi
+├─0051-项目实战之bbs选择合适的前端模版.avi
+├─0052-项目实战之bbs-前端实现动态菜单.avi
+├─0053-项目实战之bbs-编写通用版块展示模板.avi
+├─0054-项目实战之bbs-编写通用版块展示模板2.avi
+├─0055-项目实战之bbs-前端页面布局配置.avi
+├─0056-项目实战之bbs-前端页面布局配置2.avi
+├─0057-项目实战之bbs-前端展示评论和点赞数.avi
+├─0058-项目实战之bbs-用户登录.avi
+├─0059-项目实战之bbs-创建文章评论.avi
+├─0060-项目实战之bbs-csrf攻击原理及防护.avi
+├─0061-项目实战之bbs-提交评论到后台.avi
+├─0062-项目实战之bbs-提交评论到后台2.avi
+├─0063-项目实战之bbs-如何实现多级评论.avi
+├─0064-项目实战之bbs-多级评论展示到前台页面.avi
+├─0065-项目实战之bbs-多级评论展示到前台页面2及作业要求.avi
+├─0066-bbs自动加载评论.avi
+├─0067-bbs动态添加评论.avi
+├─0068-bbs创建新贴页面开发.avi
+├─0069-bbs实现文件上传.avi
+├─0070-bbs实现页面新消息自动提醒.avi
+├─0071-web聊天室几种实现方式介绍.avi
+├─0072-web聊天室表结构设计.avi
+├─0073-web聊天室聊天面板设计.avi
+├─0074-web聊天室后台如何处理消息讨论.avi
+├─0075-web聊天室聊天页面开发.avi
+├─0076-web聊天室发送消息到后台.avi
+├─0077-web聊天室用户到后台取消息.avi
+├─0078-web聊天室实时聊天效果实现.avi
+├─0079-不同聊天窗口间的切换.avi
+├─0080-把后端消息进行解析并在前端展示.avi
+├─0081-把后端消息进行解析并在前端展示2.avi
+├─0083-实现群组聊天.avi
+├─0084-实现异步文件上传.avi
+├─0085-实现异步文件上传2.avi
+├─0086-实现文件上传的进度条展示.avi
+├─0087-实现图片发送及在聊天框中展示.avi
+├─0088-本节作业需求.avi
+├─0089-中间件介绍及使用.avi
+├─0090-课前鸡汤.avi
+├─0091-主机管理项目需求分析.avi
+├─0092-主机管理项目架构设计.avi
+├─0093-主机管理项目架构设计2.avi
+├─0094-主机管理项目初始构建.avi
+├─0095-主机管理项目编写插件基类.avi
+├─0096-主机管理项目命令分发器.avi
+├─0097-主机管理项目命令分发器2.avi
+├─0098-主机管理项目提取主机列表.avi
+├─0099-主机管理项目提取yaml配置文件.avi
+├─0100-主机管理项目动态调用插件进行数据解析.avi
+├─0101-主机管理项目动态调用插件进行数据解析2.avi
+├─0102-主机管理项目对模块中的参数进行解析.avi
+├─0103-主机管理项目对模块中的参数进行解析2.avi
+├─0104-上节鸡汤之上半年的变化.avi
+├─0105-捋一捋上节内容.avi
+├─0106-生成解析数据.avi
+├─0107-生成解析数据2.avi
+├─0108-生成解析数据3.avi
+├─0109-生成解析数据4.avi
+├─0110-将新任务放到队列.avi
+├─0111-客户端开发流程及任务解析方式介绍.avi
+├─0112-客户端解析任务并执行.avi
+├─0113-客户端通过http自动下载文件.avi
+├─0114-cmdb开发之itil介绍.avi
+├─0115-cmdb开发之itil的实施目标.avi
+├─0116-cmdb开发之cmdb功能讨论.avi
+├─0117-cmdb开发之cmdb架构设计及表结构设计.avi
+├─0118-cmdb开发之cmdb架构设计及表结构设计2.avi
+├─0119-cmdb开发之cmdb自定义用户认证系统.avi
+├─0120-cmdb开发之cmdb自定义用户认证系统2.avi
+├─0121-cmdb开发之cmdb客户端设计.avi
+├─0122-cmdb开发之cmdb服务器端处理客户端汇报的数据.avi
+├─0123-cmdb开发之cmdb将客户端数据处理后入库.avi
+├─0124-cmdb开发之cmdb将客户端自动纪录硬件变更信息.avi
+├─0125-本节鸡汤.avi
+├─0126-cmdb将新资产放入待批准区.avi
+├─0127-cmdb批准新资产入库.avi
+├─0128-cmdb轻松实现世界上最安全的api接口认证.avi
+├─0129-cmdbrestfulapi接口规范.avi
+├─0130-cmdbrestfulframework介绍和使用.avi
+├─0131-分布式监控项目需求讨论.avi
+├─0132-分布式监控项目架构介绍.avi
+├─0133-分布式监控项目表结构设计.avi
+├─0134-分布式监控表结构回顾.avi
+├─0135-分布式监控创建监控模板相关.avi
+├─0136-分布式监控-客户端开发并获取监控配置.avi
+├─0137-分布式监控-客户端将监控数据汇报到服务器端.avi
+├─0138-分布式监控-监控数据存储与优化.avi
+├─0139-分布式监控-监控数据存储与优化代码分析.avi
+├─0140-分布式监控-监控数据triggers处理.avi
+├─0141-分布式监控-判断多条件trigger并触发报警.avi
+├─0142-分布式监控-trigger触发报警.avi
+├─0143-分布式监控-trigger触发及前端基本页面展示.avi
+├─0144-画图软件介绍.avi
+├─0145-网站用户质量分析监测项目介绍.avi
+├─0146-浏览器各项加载数据接口介绍.avi
+├─0147-用户数据汇报到前端.avi
+├─0148-用户信息收集脚本代码介绍.avi
+├─0149-用户信息收集脚本代码介绍2.avi
+├─0150-使用jsonp实现跨域请求访问.avi
+├─0151-后端接收用户数据并保存.avi
+├─0152-前端画图、ip地址解析等介绍.avi
+├─0153-设计模式介绍.avi
+├─0154-设计模式6大原则.avi
+├─0155-简单工厂模式.avi
+├─0156-工厂模式.avi
+├─0157-抽象工厂模式.avi
+├─0158-建造者模式.avi
+├─0159-单例模式_0.avi
+├─0160-适配器模式.avi
+├─0161-桥接模式.avi
+├─0162-组合模式.avi
+├─0163-外观模式.avi
+├─0164-享元模式.avi
+├─0165-代理模式.avi
+├─0166-模板方法模式.avi
+├─0167-责任链模式.avi
+├─0168-观察者模式.avi
+├─0169-策略模式.avi
+├─0170-tornado实例简介.avi
+├─0171-tornado模板简介.avi
+├─0172-tornado数据库介绍.avi
+├─0173-tornado 安全介绍.avi
+├─0174-容器原理简介.avi
+├─0175-容器操作.avi
+├─0176-容器管理系统概要设计.avi
+├─0177-容器管理接口介绍.avi
+├─0178-容器管理详细设计.avi
+├─0179-创建容器管理系统.avi
+├─0180-tornado回顾.avi
+├─0181-docker回顾.avi
+├─0182-用户登录实现.avi
+├─0183-节点管理实现.avi
+├─0184-系统框架实现.avi
+├─0185-容器管理实现.avi
+├─0186-容器生命周期管理.avi
+├─0187-云计算介绍.avi
+├─0188-openstack各组件基本介绍.avi
+├─0189-keystone详解.avi
+├─0190-glance组件详解.avi
+├─0191-三种存储补充.avi
+├─0192-rpc机制介绍.avi
+├─0193-nova组件详解.avi
+├─0194-消息队列补充.avi
+├─0195-neutron组件详解.avi
+├─0196-openstack通信流程详解.avi
+├─0197-vlan网络模式.avi
+├─0198-vlan网络模式 2.avi
+├─0199-vlan网络模式 3.avi
+├─0200-vlan模式补充.avi
+├─0201-gre网络模式.avi
+├─0202-vxlan网络模式.avi
+├─0203-osi七层介绍.avi
+├─0204-网络模式的作用.avi
+├─0205-作业讲解.avi
+├─0206-上节课回顾.avi
+├─0207-ceph概述.avi
+├─0208-ceph逻辑结构.avi
+├─0209-ceph网络架构.avi
+├─0210-ceph逻辑结构中.avi
+├─0211-客户端写入数据流程分析.avi
+├─0212-pg逻辑概念.avi
+├─0213-pg补充.avi
+├─0214-缓存机制.avi
+├─0215-ceph部署讲解.avi
+├─0216-openstack网络介绍.avi
+├─0217-openstack部署.avi
+├─0218-openstack日常应用.avi（全部完结）
