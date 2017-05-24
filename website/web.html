@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>美乐乐家具网站</title>
+    <style>
+        .header{
+            right: 0;
+            left: 0;
+            top: 0;
+            height:30px;
+            line-height: 30px;
+            background-color: rgba(169,169,169,0.39);
+        }
+        .body_1{
+            background-color: white;
+            height: 61px;
+        }
+        .logo{
+            background-image: url('logo.png');
+            float: left;
+            width:193px;
+            height: 61px;
+            margin-left: 50px;
+            cursor: pointer;
+        }
+        .buy_gif{
+            background-image: url('buy.gif');
+            float: left;
+            margin: 0 30px;
+            width: 170px;
+            height: 61px;
+            cursor: pointer;
+        }
+        .search{
+            float: top;
+            width: 487px;
+            height: 36px;
+            background-color: red;
+        }
+        .search_box{
+            float:left;
+            width:382px;
+            height:30px;
+            background-color: white;
+            margin: 3px;
+        }
+        .body_2{
+            height: 143px;
+            left: 0;
+            right: 0;
+            top: 0;
+            border-top: red solid;
+        }
+        .body_2_menu{
+            float: left;
+            position: inherit;
+            width: 256px;
+            height: 106px;
+            border-left: 1px solid #8b8b8b;
+            border-bottom: 1px solid #919191;
+            padding: 17px 0;
+        }
+        .body_2_menu_topic{
+            float: top;
+            font-weight: bold;
+            text-align: center;
+            background-image: url('desk_1.png');
+            background-repeat: no-repeat;
+            background-position-x: 55px;
+        }
+        .li{
+            float: left;
+            width: 73px;
+            margin: 17px 0 0 0;
+            line-height: 10px;
+        }
+        .underline{
+            text-decoration: none;
+            font-size: small;
+            color: #767676;
+        }
+        .luck_draw{
+            background-image: url('luck_draw.jpg');
+            position: absolute;
+            float: left;
+            left: 1073px;
+            width: 160px;
+            height: 141px;
+        }
+        .body_3{
+            height: 500px;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .body_3_bottom{
+            float: left;
+            left: 50px;
+            width: 1185px;
+            height: 481px;
+            position: relative;
+            z-index: 2;
+        }
+        .nav-table{
+            margin-top: 10px;
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 340px;
+            background-color: #fff9e9;
+            border: 1px solid #f9ebc4;
+        }
+        td{
+            height: 41px;
+            text-align: center;
+            border: #a89d7c;
+            background: #fff9e9;
+
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .pro_show{
+            float: left;
+            position: absolute;
+            z-index: 3;
+            left:357px;
+            width: 828px;
+            height: 481px;
+            background-color: #f9f4dc
+        }
+        .show_1{
+            background-image: url('show_1.jpg');
+            float: left;
+            width: 264px;
+            height: 174px;
+            margin-bottom: 12px;
+        }
+        .reduce_price{
+            color: white;
+            background-color: #ff6664;
+            font-size: small;
+            font-weight: bold;
+            padding: 3px;
+        }
+        .red{
+            color: red;
+            font-weight: bold;
+        }
+        .show_2{
+            background-image: url('show_2.jpg');
+            float: left;
+            width: 264px;
+            height: 174px;
+            margin-bottom: 12px;
+        }
+        .show_3{
+            background-image: url('show_3.jpg');
+            float: left;
+            width: 264px;
+            height: 174px;
+            margin-bottom: 12px;
+        }
+        .show_4{
+            background-image: url('show_4.jpg');
+            float: left;
+            width: 264px;
+            height: 174px;
+            margin-bottom: 12px;
+        }
+        .show_5{
+            background-image: url('show_5.jpg');
+            float: left;
+            width: 264px;
+            height: 174px;
+            margin-bottom: 12px;
+        }
+        .show_6{
+            background-image: url('show_6.jpg');
+            float: left;
+            width: 264px;
+            height: 174px;
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body style="margin: 0 auto">
+    <div class="header">
+        <div style="float: left;left: 50px;position: absolute">
+            <a style="cursor: pointer">请登陆</a>
+            <a style="cursor: pointer">免费注册</a>
+        </div>
+        <div style="float: right;right: 100px;position: absolute;">
+            <span style="float: right;color: red;font-weight: bold;">20172121711</span>
+            <span style="float: right;margin-left: 30px;">全国热线:</span>
+            <a style="float: right;margin-left: 20px;cursor: pointer;">收藏本站</a>
+            <a style="float: right;margin-left: 20px;cursor: pointer;">帮助中心</a>
+            <a style="float: right;margin-left: 20px;cursor: pointer;">关注美乐乐</a>
+            <a style="float: right;margin-left: 20px;cursor: pointer;">购物车0</a>
+            <a style="float: right;margin-left: 20px;cursor: pointer;">我的美乐乐</a>
+        </div>
+    </div>
+
+    <div class="body_1" style="margin: 30px 0;">
+        <div class="logo"></div>
+        <div class="buy_gif"></div>
+        <form action="http://www.cnblogs.com/0zcl">
+            <div style="float: left;width: 487px;height: 61px;">
+                <div class="search">
+                    <div class="search_box">
+                        <input  type="text" value="开年大促,新品抢鲜!爆款团购立省4500,好礼抽不停!" style="width: 380px;height: 25px;"/>
+                    </div>
+                    <input type="submit" value="搜&nbsp;&nbsp;索" style="width: 90px;height: 30px;margin: 3px;cursor: pointer;"/>
+                </div>
+                <div style="margin-top: 5px;width: 487px;height: 20px;">
+                    <a href="http://www.cnblogs.com/0zcl" target="_blank" style="margin-right: 3px;color: red;text-decoration: none;">抢1500元红包</a>
+                    <a href="http://www.cnblogs.com/0zcl" target="_blank" style="margin-right: 3px;text-decoration: none;">床</a>
+                    <a href="http://www.cnblogs.com/0zcl" target="_blank" style="margin-right: 3px;text-decoration: none;">沙发</a>
+                    <a href="http://www.cnblogs.com/0zcl" target="_blank" style="margin-right: 3px;text-decoration: none;">餐桌椅</a>
+                    <a href="http://www.cnblogs.com/0zcl" target="_blank" style="margin-right: 3px;text-decoration: none;">实木床</a>
+                    <a href="http://www.cnblogs.com/0zcl" target="_blank" style="margin-right: 3px;color: red;text-decoration: none;">床垫大促</a>
+                    <a href="http://www.cnblogs.com/0zcl" target="_blank" style="margin-right: 3px;text-decoration: none;">转角沙发</a>
+                    <a href="http://www.cnblogs.com/0zcl" target="_blank" style="margin-right: 3px;text-decoration: none;">灯饰</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="body_2">
+
+        <div class="body_2_menu" style="left: 50px;position: absolute;">
+            <div style="padding: 0 17px 0 17px;height: inherit;border-right: 1px dashed #8c8c8c;">
+                <div class="body_2_menu_topic">客厅家具</div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline" style="color: red;font-weight: bold;">沙发</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline" >电视柜</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline" >客厅套装</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline" >布艺沙发</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline" >酒柜</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline" style="color: red;font-weight: bold;">小户型沙发</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline" >鞋柜</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline" >茶几/边桌</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline" style="font-weight: bold;">真皮沙发</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="body_2_menu" style="left: 306px;border-left: none;position: absolute;">
+            <div style="padding: 0 17px 0 17px;height: inherit;border-right: 1px dashed #8c8c8c;">
+                <div class="body_2_menu_topic" style="background-image: url('desk_2.png');">卧室家具</div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline" style="color: red;font-weight: bold;">双人床</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline" >衣柜</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline" >实木床</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline" >床垫</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline" >床头柜</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline" style="color: red;font-weight: bold;">卧室套装</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline" style="font-weight: bold;">实木衣柜</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">单人床</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline" style="font-weight: bold;">啪啪床</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="body_2_menu" style="left: 562px;border-left: none;position: absolute;">
+            <div style="padding: 0 17px 0 17px;height: inherit;border-right: 1px dashed #8c8c8c;">
+                <div class="body_2_menu_topic" style="background-image: url('desk_3.png');">餐厅家具</div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">餐桌</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">餐厅套装</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">欧式餐桌</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">实木餐桌</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">餐边柜</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" style="color: red;font-weight: bold;" class="underline">折叠餐桌</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">现代餐桌</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">特价餐椅</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">小户型餐桌</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="body_2_menu" style="left: 818px;border-left: none;position: absolute;">
+            <div style="padding: 0 17px 0 17px;height: inherit;border-right: 1px dashed #8c8c8c;">
+                <div class="body_2_menu_topic" style="background-image: url('desk_4.png');">儿童家具</div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">儿童床</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">双层床</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">上下床</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">高低床</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">儿童书桌</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">儿童床垫</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline" style="font-weight: bold;">公主床</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">儿童衣柜</a>
+                </div>
+                <div class="li">
+                    <a href="http://www.cnblogs.com/0zcl" class="underline" style="color: red;font-weight: bold;" >子母床</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="luck_draw"></div>
+
+    </div>
+
+    <div>&nbsp;</div>
+
+    <div class="body_3">
+        <div class="body_3_bottom">
+            <div style="float: left;width: 340px;height: 481px;z-index: 3;position: absolute">
+                <div style="background-image: url('sofa_1.jpg');width: 340px;height: 341px"></div>
+
+                <div>
+                    <table class="nav-table">
+                    <tbody >
+                        <tr>
+                            <td>
+                                <a href="http://www.cnblogs.com/0zcl" target="_blank">家具热销榜</a>
+                            </td>
+                            <td>
+                                <a href="http://www.cnblogs.com/0zcl" target="_blank">特价精选</a>
+                            </td>
+                            <td>
+                                <a href="http://www.cnblogs.com/0zcl" target="_blank">实木家具</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="http://www.cnblogs.com/0zcl" target="_blank">折扣专区</a>
+                            </td>
+                            <td>
+                                <a href="http://www.cnblogs.com/0zcl" target="_blank">现代客厅</a>
+                            </td>
+                            <td>
+                                <a href="http://www.cnblogs.com/0zcl" target="_blank">传统中式</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="http://www.cnblogs.com/0zcl" target="_blank">小户型家具</a>
+                            </td>
+                            <td>
+                                <a href="http://www.cnblogs.com/0zcl" target="_blank">红木家具</a>
+                            </td>
+                            <td>
+                                <a href="http://www.cnblogs.com/0zcl" target="_blank">功能沙发</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+
+            <div class="pro_show">
+                <div style="float: left;width: 264px;height: 228px;z-index: 4;">
+                    <div class="show_1"></div>
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">畅销经典款 高档水牛头层真皮床 对称式描..</a>
+                    <div style="margin-top: 3px;">
+                        <span class="red">￥3650.00</span>
+                        <span class="reduce_price">限时降500</span>
+                        <span class="underline" style="float: right;margin-top: 4px;">已售<span class="red">37363</span></span>
+                    </div>
+                </div>
+
+                <div style="float: left;width: 264px;height: 228px;z-index: 4;margin-left: 18px;">
+                    <div class="show_2"></div>
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">名流之选 巴西进口头层黄牛皮 五档调节头..</a>
+                    <div style="margin-top: 3px;">
+                        <span class="red">￥8868.00</span>
+                        <span class="reduce_price">限时降500</span>
+                        <span class="underline" style="float: right;margin-top: 4px;">已售<span class="red">43419</span></span>
+                    </div>
+                </div>
+
+                <div style="float: left;width: 264px;height: 228px;z-index: 4;margin-left: 18px;">
+                    <div class="show_3"></div>
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">橡木臻品 自然木纹 宽厚桌脚 美国进口白...</a>
+                    <div style="margin-top: 3px;">
+                        <span class="red">￥2040.00</span>
+                        <span class="underline" style="float: right;margin-top: 4px;">已售<span class="red">6666</span></span>
+                    </div>
+                </div>
+
+                <div style="float: left;width: 264px;height: 228px;z-index: 4;margin-top: 25px;">
+                    <div class="show_4"></div>
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">传承经典 返璞归真 复古大气雕花 天然木...</a>
+                    <div style="margin-top: 3px;">
+                        <span class="red">￥3366.00</span>
+                        <span class="reduce_price">限时降800</span>
+                        <span class="underline" style="float: right;margin-top: 4px;">已售<span class="red">4843</span></span>
+                    </div>
+                </div>
+
+                <div style="float: left;width: 264px;height: 228px;z-index: 4;margin-left: 18px;margin-top: 25px;">
+                    <div class="show_5"></div>
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">全实木框架沙发 高档提花刺绣绒布转角沙...</a>
+                    <div style="margin-top: 3px;">
+                        <span class="red">￥8999.00</span>
+                        <span class="reduce_price">限时降1500</span>
+                        <span class="underline" style="float: right;margin-top: 4px;">已售<span class="red">5201314</span></span>
+                    </div>
+                </div>
+
+                <div style="float: left;width: 264px;height: 228px;z-index: 4;margin-left: 18px;margin-top: 25px;">
+                    <div class="show_6"></div>
+                    <a href="http://www.cnblogs.com/0zcl" class="underline">人气爆款 栅栏式简约设计 臻选美国进口...</a>
+                    <div style="margin-top: 3px;">
+                        <span class="red">￥2250.00</span>
+                        <span class="reduce_price">限时降1200</span>
+                        <span class="underline" style="float: right;margin-top: 4px;">已售<span class="red">40356</span></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <h1 style="text-align: center;margin-top: 0" ><a href="http://www.cnblogs.com/0zcl" target="_blank">我的博客链接</a></h1>
+
+</body>
+</html>
