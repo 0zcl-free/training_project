@@ -1,0 +1,12 @@
+2016-11-04 15:10:50,843 - WARNING - warn message
+2016-11-04 15:10:50,843 - ERROR - error message
+2016-11-04 15:10:50,844 - CRITICAL - critical message
+2016-11-04 15:11:05,108 - WARNING - warn message
+2016-11-04 15:11:05,108 - ERROR - error message
+2016-11-04 15:11:05,108 - CRITICAL - critical message
+2016-11-04 15:11:18,943 - WARNING - warn message
+2016-11-04 15:11:18,943 - ERROR - error message
+2016-11-04 15:11:18,943 - CRITICAL - critical message
+2016-11-04 15:13:03,037 - WARNING - warn message
+2016-11-04 15:13:03,037 - ERROR - error message
+2016-11-04 15:13:03,037 - CRITICAL - critical message

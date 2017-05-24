@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .left_menu{
+            float: left;
+            width: 30%;
+            height: 400px;
+            background-color: #f9ebc4;
+        }
+        .container{
+            float: left;
+            width: 70%;
+            height: 400px;
+            background-color: aquamarine;
+        }
+        .title{
+            background-color: indianred;
+            color: white;
+            height: 40px;
+            line-height: 40px;
+            font-size: larger;
+            font-weight: bold;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="left_menu">
+        <div class="item">
+            <!--this是特殊参数，代表本身的标签-->
+            <div class="title" onclick="Func(this);">菜单一</div>
+            <div class="body">
+                <div>1.1</div>
+                <div>1.2</div>
+                <div>1.3</div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="title" onclick="Func(this);">菜单二</div>
+            <div class="body hide">
+                <div>2.1</div>
+                <div>2.2</div>
+                <div>2.3</div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="title" onclick="Func(this);">菜单三</div>
+            <div class="body hide">
+                <div>3.1</div>
+                <div>3.2</div>
+                <div>3.3</div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="title" onclick="Func(this);">菜单四</div>
+            <div class="body hide">
+                <div>4.1</div>
+                <div>4.2</div>
+                <div>4.3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"></div>
+
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        function Func(ths) {
+            //难点:如何点菜单Ｘ，就获得菜单Ｘ的标签？？
+            //通过参数this
+            //console.log($(ths).text());  //获取标签内容
+
+            //获得菜单标签后，如何获得菜单标签下的body标签，并去除hide样式 removeClass()
+            $(ths).next().removeClass("hide");
+            $(ths).parent().siblings().find(".body").addClass("hide");
+        }
+    </script>
+</body>
+</html>

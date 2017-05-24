@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zcl</title>
+</head>
+<body>
+    <table border="1">
+        <thead></thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td onclick="get_prev(this)">编辑</td>
+            </tr>
+        </tbody>
+    </table>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        function get_prev(arg){
+            //$(arg).sibling() 当前标签的所有标签
+            var list = $(arg).siblings().map(function () {
+                //map和python中的map类似,循环每个标签并做好相应的操作
+                //每一个标签被循环时,都会执行map里面的函数
+                //将所有的结果封装到一个数组中(列表)
+                return $(this).text();
+                //返回列表
+            });
+            console.log(list[0],list[1],list[2])
+        }
+    </script>
+</body>
+</html>

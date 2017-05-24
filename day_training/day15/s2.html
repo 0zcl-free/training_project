@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <div id="aa">zcl</div>
+    </div>
+    <ul>
+        <li>11</li>
+        <li>22</li>
+        <li>33</li>
+    </ul>
+    <div>
+        <div class="bb">zcl</div>
+        <div class="bb">zcl</div>
+        <div class="bb">zcl</div>
+    </div>
+
+    <form>
+        <p>用户名:<input name="username" value="zcl"/></p>
+        <p>密码:<input name="pwd" value="123"/></p>
+    </form>
+
+<script type="text/javascript">
+    var nid = document.getElementById("aa");
+    nid.innerText = "alex";
+
+    var lis = document.getElementsByTagName("li");
+    for(var i in lis){
+        var item = lis[i];
+        item.innerText = i;
+    }
+
+    var lis2 = document.getElementsByClassName("bb");
+    console.log(lis2);    //打印: [div.bb, div.bb, div.bb]
+
+    var username = document.getElementsByName("username")[0];
+    var pwd = document.getElementsByName("pwd")[0];
+    console.log(username, pwd); //打印: <input name="username" value="zcl"> <input name="pwd" value="123">
+    console.log(username.value, pwd.value);  //打印: zcl 123
+</script>
+
+</body>
+</html>

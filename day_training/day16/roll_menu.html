@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        body{
+            margin: 0px;
+        }
+        img {
+            border: 0;
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .wrap{
+            width: 980px;
+            margin: 0 auto;
+        }
+
+        .pg-header{
+            background-color: #303a40;
+            -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.2);
+            -moz-box-shadow: 0 2px 5px rgba(0,0,0,.2);
+            box-shadow: 0 2px 5px rgba(0,0,0,.2);
+        }
+        .pg-header .logo{
+            float: left;
+            padding:5px 10px 5px 0px;
+        }
+        .pg-header .logo img{
+            vertical-align: middle;
+            width: 110px;
+            height: 40px;
+
+        }
+        .pg-header .nav{
+            line-height: 50px;
+        }
+        .pg-header .nav ul li{
+            float: left;
+        }
+        .pg-header .nav ul li a{
+            display: block;
+            color: #ccc;
+            padding: 0 20px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .pg-header .nav ul li a:hover{
+            color: #fff;
+            background-color: #425a66;
+        }
+        .pg-body{
+
+        }
+        .pg-body .catalog{
+            position: absolute;
+            top:60px;
+            width: 200px;
+            background-color: #fafafa;
+            bottom: 0px;
+        }
+        .pg-body .catalog.fixed{
+            position: fixed;
+            top:10px;
+        }
+
+        .pg-body .catalog .catalog-item.active{
+            color: #fff;
+            background-color: #425a66;
+        }
+
+        .pg-body .content{
+            position: absolute;
+            top:60px;
+            width: 700px;
+            margin-left: 210px;
+            background-color: #fafafa;
+            overflow: auto;
+        }
+        .pg-body .content .section{
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pg-header">
+        <div class="wrap clearfix">
+            <div class="logo">
+                <a href="#">
+                    <!--<img src="http://core.pc.lietou-static.com/revs/images/common/logo_7012c4a4.pn">-->
+                </a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a  href="#">首页</a>
+                    </li>
+                    <li>
+                        <a  href="#">功能一</a>
+                    </li>
+                    <li>
+                        <a  href="#">功能二</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="pg-body">
+        <div class="wrap">
+            <div class="catalog">
+                <div class="catalog-item" auto-to="function1"><a>第1张</a></div>
+                <div class="catalog-item" auto-to="function2"><a>第2张</a></div>
+                <div class="catalog-item" auto-to="function3"><a>第3张</a></div>
+            </div>
+            <div class="content">
+                <div menu="function1" class="section">
+                    <h1>第一章</h1>
+                </div>
+                <div menu="function2" class="section">
+                    <h1>第二章</h1>
+                </div>
+                <div menu="function3" class="section">
+                    <h1>第三章</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        window.onscroll = function () {
+            if($(window).scrollTop() > 50){　//当滑轮离顶部距离大于50，则将菜单固定，否则移除固定属性
+                $('.catalog').addClass('fixed');
+            }else{
+                $('.catalog').removeClass('fixed');
+            }
+
+            var ws = $(window).scrollTop();  //滑轮滚动距离
+            $('.content').children().each(function () {  //循环每个子标签
+                var offs = $(this).offset();   //离顶部，左部的距离
+                var offTop = offs.top;        //每一章的标签离顶部的距离
+//                console.log(offTop);
+                //当前标签离顶部的高度 + 当前标签的高度 > 滚动条的高度，则对当前标签对应的菜单着色
+                var total = offTop + $(this).height();
+                //滑轮滚动距离大于标签离顶部的距离，此时菜单要着色　ws>offTop
+                if(ws>offTop && ws<total){
+                    //如果滑轮到了底部，最后一个菜单增大
+                    //如何判定滑轮到了底部？？可用：浏览器界面高度+滑轮滚动高度＝HTML文档高度
+                    if($(window).height() + $(window).scrollTop() == $(document).height()){
+                        $(".catalog").children(':last').css("fontSize", "48px").siblings().css("fontSize", "12px");
+                    }else {  //未到底部
+                        var t = $(this).attr("menu");  //猎取标签属性menu的值，去菜单找对应的auto_to属性值
+                        var target = 'div[auto-to="' + t + '"]';
+                        $(".catalog").children(target).css("fontSize", "48px").siblings().css("fontSize", "12px");
+
+                    }
+                }
+            })
+        };
+
+    </script>
+</body>
+</html>

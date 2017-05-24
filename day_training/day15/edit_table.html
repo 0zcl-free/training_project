@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit_table</title>
+    <style>
+        table{
+            border: solid 2px #505aff;
+            border-collapse: collapse;
+        }
+        .border{
+            position: fixed;
+            left: 200px;  top: 150px;
+            width: 350px;height: 200px;
+            background-color: #f9ebc4;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>主机名</th>
+                <th>IP</th>
+                <th>端口</th>
+                <th>编辑</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="host">1.1</td>
+                <td class="id">1.2</td>
+                <td class="port">1.3</td>
+                <td ><input type="button" value="编辑" onclick="Click(this);"/></td>
+            </tr>
+            <tr>
+                <td class="host">2.1</td>
+                <td class="id">2.2</td>
+                <td class="port">2.3</td>
+                <td><input type="button" value="编辑" onclick="Click(this);"/></td>
+            </tr>
+            <tr>
+                <td class="host">3.1</td>
+                <td class="id">3.2</td>
+                <td class="port">3.3</td>
+                <td><input type="button" value="编辑" onclick="Click(this);"/></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="border" class="border hide">
+        <form action="">
+            <div style="margin-top: 50px;margin-left: 50px;">主机名:<input id="hostname" type="text" /></div>
+            <div style="margin-left: 50px;margin-top: 10px;">&nbsp;&nbsp;IP:<input id="id" type="text" /></div>
+            <div style="margin-left: 50px;margin-top: 10px;">端　口:<input id="port" type="text" /></div>
+            <div style="margin-left: 100px;margin-top: 20px;">
+                <input type="submit" value="确定" onclick="return Sure();"/>&nbsp;&nbsp;
+                <input type="button" value="取消" onclick="Cancel();"/>
+            </div>
+        </form>
+    </div>
+
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        function Click(ths) {
+            //初始时编辑窗口不可见，当一点编辑时，便弹出
+            $("#border").removeClass("hide");
+            //找到主机名对应的内容text(),并将内容加到弹出的input框
+            var ret_host = $(ths).parent().siblings(".host").text();
+            $('#hostname').attr("value", ret_host);
+            //类似同上
+            var ret_id = $(ths).parent().siblings(".id").text();
+            $('#id').attr("value", ret_id);
+            //类似同上
+            var ret_port = $(ths).parent().siblings(".port").text();
+            $('#port').attr("value", ret_port);
+            /*
+            console.log(ret_host,typeof ret_host);
+            console.log(ret_id,typeof ret_id);
+            console.log(ret_port,typeof ret_port);
+            */
+        }
+        function Cancel() {
+            $('#border').addClass("hide");
+        }
+        function Sure() {
+//            var return_host = document.getElementById("hostname").text();
+//            var return_host = $('#hostname').attr("value");
+//            var return_host = $('#hostname').val();
+            dic = {};
+            var ret = true;
+            $('input[type=text]').each(function () {
+                var value = $(this).val();
+                var id = $(this).attr("id");
+                dic[id] = value;
+                if(value.trim()==0){  //如果编辑后输入为空
+                    $(this).css("border-color", "red");  //当输入为空时，为输入框设置颜色
+                    ret = false;
+                }else {
+                    $(this).css("border-color", "green");
+                }
+            });
+            console.log(dic);
+            return ret;
+        }
+    </script>
+
+</body>
+</html>

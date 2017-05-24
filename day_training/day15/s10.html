@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>【欢迎访问前程明亮博客】</title>
+</head>
+<body>
+    <input type="button" onclick="return StopInterval();">
+    <script>
+        /*
+        setInterval("操作", "间隔(默认为毫秒)");
+        其实是每隔一段时间创建一个线程
+        */
+//        创建一个定时器时默认会返回一个句柄；设置定时器并获取句柄(全局变量)
+        obj = setInterval("Func()", 500);
+//        obj = setTimeout("Func()", 5000);   //5s后执行一次后停止，想要停止的话可用clearTimeout();
+
+        function StopInterval() {
+            //清除定时器
+            clearInterval(obj);
+        }
+
+        function Func() {
+            var text = document.title;  //获取title的内容
+            var firstChar = text.charAt(0);  //获取第一个字符的内容
+            var subText = text.substring(1, text.length);
+            var newTitle = subText + firstChar;
+            document.title = newTitle;
+        }
+    </script>
+</body>
+</html>

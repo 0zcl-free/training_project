@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script src="jquery-3.1.1.min.js"></script>
+    <!--引入拓展的JS,下面这句代码可不能放在上面这句引入jQuery代码的前面!!-->
+    <script src="extend.js"></script>
+    <script>
+        //一般都会将拓展的jQuery单独放在一个文件，
+        /*
+        jQuery.extend({    //用于拓展jQuery的方法. 方式一：
+            zcl: function () {
+                return "丑";
+            }
+        });
+
+        jQuery.fn.extend({　　 //方式二:
+            alex: function () {
+                return "better 丑";
+            }
+        });
+        */
+        var ret = $.zcl();
+        alert(ret);
+        var retu = $('.c1').alex();  //选择器.方法()
+        alert(retu)
+    </script>
+</body>
+</html>

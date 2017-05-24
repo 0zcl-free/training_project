@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+</head>
+<body>
+    <h1>welcome login</h1>
+    <form>
+        <div>
+            <label for="user">用 户 名:</label>
+            <input id="user" type="text"/>
+        </div>
+        <div>
+            <label for="pwd">密　　码:</label>
+            <input id="pwd" type="password"/>
+        </div>
+        <div>
+            <label for="re_pwd">重复密码:</label>
+            <input id="re_pwd" type="password"/>
+        </div>
+        <h3>请选择省份:</h3>
+        <select>
+            <option>山东省</option>
+            <option>安徽省</option>
+            <option>湖南省</option>
+            <option>湖北省</option>
+            <option>广西省</option>
+            <option selected="selected">广东省</option>
+            <option>江西省</option>
+            <option>海南省</option>
+        </select>
+        <h3>请选择性别:</h3>
+        <div>
+            <label for="man">男:</label>
+            <input id="man" name="gender" type="radio"/>
+        </div>
+        <div>
+            <label for="woman">女:</label>
+            <input id="woman" name="gender" type="radio"/>
+        </div>
+        <h3>请选择爱好(多选):</h3>
+        <div>
+            <label for="jita">吉　他:</label>
+            <input id="jita" type="checkbox"/>
+        </div>
+        <div>
+            <label for="piano">钢　琴:</label>
+            <input id="piano" type="checkbox"/>
+        </div>
+        <div>
+            <label for="drum">架子鼓:</label>
+            <input id="drum" type="checkbox"/>
+        </div>
+        <div>
+            <label for="blog">写博客:</label>
+            <input id="blog" type="checkbox"/>
+        </div>
+        <div>
+            <label for="other">其它兴趣爱好:</label>
+            <textarea id="other"></textarea>
+        </div>
+        <hr />
+        <div>
+            <input type="submit" value="提交"/>
+        </div>
+        <div style="position: fixed; bottom: 20px;right: 20px;">
+            <a href="Login.html" >
+                <span style="color: darkorange;">
+                    返回上一页
+                </span>
+            </a>
+        </div>
+    </form>
+</body>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top</title>
+    <style>
+        .top{
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: #e7d9b1;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!--可通过$("#aa").scrollTop(0)使下面的小滚动条返回顶部-->
+    <div id="aa" style="height: 200px;background-color: #f8ff89;overflow: auto;">
+        <p>aa</p>
+        <p>aa</p>
+        <p>aa</p>
+        <p>aa</p>
+        <p>aa</p>
+        <p>aa</p>
+        <p>aa</p>
+        <p>aa</p>
+    </div>
+
+    <div style="height: 2000px; background-color: #a3ffd3;"></div>
+
+    <div class="top hide" onclick="GoTop();">返回顶部</div>
+
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        //给windows注册一个事件，当滑轮每移动一次就执行一次该事件
+        window.onscroll = function () {
+            //console.log(123);　　//一滚动就输出123
+            //获取当前的scrollTop
+            var current_top = $(window).scrollTop();
+            if(current_top>100){
+                $(".top").removeClass("hide");
+            }else {
+                $(".top").addClass("hide");
+            }
+        };
+
+        function GoTop() {
+            $(window).scrollTop(0);
+        }
+    </script>
+</body>
+</html>

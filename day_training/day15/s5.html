@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>s5</title>
+</head>
+<body>
+    <input type="text" id="search" value="请输入关键字" onfocus="Focus()" onblur="Blur()"/>
+
+    <script type="text/javascript">
+        function Focus() {
+            var nid = document.getElementById("search");
+            var value = nid.value;
+            if(value == "请输入关键字"){
+                nid.value = "";
+            }
+        }
+        function Blur() {
+            var nid = document.getElementById("search");
+            var value = nid.value;
+            if(value.trim() == ""){
+                nid.value = "请输入关键字";
+            }
+        }
+
+    </script>
+</body>
+</html>

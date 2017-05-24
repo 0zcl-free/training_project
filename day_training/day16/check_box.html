@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <input type="button" value="全选" onclick="SelectAll();" />
+        <input type="button" value="取消" onclick="ClearAll();" />
+        <input type="button" value="反选" onclick="Reverse();" />
+    </div>
+    <div>
+        <table border="1">
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>123</td>
+                <td>123</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>123</td>
+                <td>123</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>123</td>
+                <td>123</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>123</td>
+                <td>123</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        function SelectAll() {
+            //找到table标签中的所有input
+            //$("table input[type='checkbox']")  找到所有input，是一个列表
+            $("table input[type='checkbox']").prop("checked", true);
+        }
+        function ClearAll() {
+            $("table input[type='checkbox']").prop("checked", false);
+        }
+        function Reverse() {
+            /*
+            //用下面的方法，可以即输出序号，也能输出元素
+            var userList = [11,22,33,44];
+            $.each(userList, function (i, item) {
+                console.log(i, item);
+            });
+            */
+
+            $("table input[type='checkbox']").each(function () {
+                //jQuery封装，循环执行该方法
+                //$(this) 表示当前执行的元素
+                var isChecked = $(this).prop("checked");  //返回true或false
+                //检查是否已被选中，是则取消，否则选中
+                if(isChecked){
+                    $(this).prop("checked",false);
+                }else {
+                    $(this).prop("checked",true);
+                }
+
+            })
+        }
+    </script>
+
+</body>
+</html>

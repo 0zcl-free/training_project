@@ -1,0 +1,152 @@
+一. 基本Socket实例
+前面讲了这么多，到底咋么用呢？
+
+
+
+上面的代码的有一个问题， 就是SocketServer.py运行起来后， (问题一)接收了一次客户端的data就退出了。。。， 但实际场景中，一个连接建立起来后，可能要进行多次往返的通信。
+
+
+
+
+
+(改进一)多次的数据交互怎么实现呢？
+
+
+
+实现了多次交互， 棒棒的， 但你会(问题二)发现一个小问题， 就是客户端一断开，服务器端就进入了死循环(我自己测试Windows不会, Linux会)，为啥呢？
+
+看客户端断开时服务器端的输出
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+等待客户端的连接...
+新连接: ('127.0.0.1', 62722)
+收到消息: b'hey'
+收到消息: b'you'
+收到消息: b''  #客户端一断开，服务器端就收不到数据了，但是不会报错，就进入了死循环模式。。。
+收到消息: b''
+收到消息: b''
+收到消息: b''
+收到消息: b''
+知道了原因就好解决了，只需要(改进二)加个判断服务器接到的数据是否为空就好了，为空就代表断了。。。
+
+
+
+
+二.Socket实现多连接处理
+上面的代码虽然实现了服务端与客户端的多次交互，但是你会发现，(问题三)如果客户端断开了， 服务器端也会跟着立刻断开，因为服务器只有一个while 循环，客户端一断开，服务端收不到数据 ，就会直接break跳出循环，然后程序就退出了，这显然不是我们想要的结果 ，我们想要的是，客户端如果断开了，我们这个服务端还可以为下一个客户端服务，它不能断，她接完一个客，擦完嘴角的遗留物，就要接下来勇敢的去接待下一个客人。 在这里如何实现呢？
+
+1
+conn,addr = server.accept() #接受并建立与客户端的连接,程序在此处开始阻塞,只到有客户端连接进来...
+我们知道上面这句话负责等待并接收新连接，对于上面那个程序，其实在(改进三)while break之后，只要让程序再次回到上面这句代码这，就可以让服务端继续接下一个客户啦。
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+import socket
+
+server = socket.socket() #获得socket实例
+
+server.bind(("localhost",9998)) #绑定ip port
+server.listen()  #开始监听
+
+while True: #第一层loop
+    print("等待客户端的连接...")
+    conn,addr = server.accept() #接受并建立与客户端的连接,程序在此处开始阻塞,只到有客户端连接进来...
+    print("新连接:",addr )
+    while True:
+
+        data = conn.recv(1024)
+        if not data:
+            print("客户端断开了...")
+            break #这里断开就会再次回到第一次外层的loop
+        print("收到消息:",data)
+        conn.send(data.upper())
+
+server.close()
+注意了， 此时(问题四,未改进哈哈,以后学到再发blog)服务器端依然只能同时为一个客户服务，其客户来了，得排队(连接挂起)，不能玩 three some. 这时你说想，我就想玩3p,就想就想嘛，其实也可以，多交钱嘛，继续往下看，后面开启新姿势后就可以玩啦。。。
+
+
+
+三.通过socket实现简单的ssh
+光只是简单的发消息、收消息没意思，干点正事，可以做一个极简版的ssh，就是客户端连接上服务器后，让服务器执行命令，并返回结果给客户端。
+
+
+
+very cool , 这样我们就做了一个简单的ssh , 但多试几条命令你就会发现，上面的程序有以下2个问题。
+
+不能执行top等类似的 会持续输出的命令,这是因为，服务器端在收到客户端指令后，会一次性通过os.popen执行，并得到结果后返回给客户，但(问题五,未改进哈哈,以后学到再发blog)top这样的命令用os.popen执行你会发现永远都不会结束，所以客户端也永远拿不到返回。(真正的ssh是通过select 异步等模块实现的，我们以后会涉及)
+不能执行像cd这种没有返回的指令， 因为客户端每发送一条指令，就会通过client.recv(1024)等待接收服务器端的返回结果，但是(问题六)cd命令没有结果 ，服务器端调用conn.send(data)时是不会发送数据给客户端的。 所以客户端就会一直等着，等到天荒地老，结果就卡死了。解决的办法是，(改进六)在服务器端判断命令的执行返回结果的长度，如果结果为空，就自己加个结果返回给客户端，如写上"cmd exec success, has no output."
+如果执行的命令(问题七)返回结果的数据量比较大，会发现，结果返回不全，在客户端上再执行一条命令，结果返回的还是上一条命令的后半段的执行结果，这是为什么呢？这是因为，我们的客户写client.recv(1024)， 即客户端一次最多只接收1024个字节，如果服务器端返回的数据是2000字节，那有至少9百多字节是客户端第一次接收不了的，那怎么办呢，服务器端此时不能把数据直接扔了呀，so它会暂时存在服务器的io发送缓冲区里，等客户端下次再接收数据的时候再发送给客户端。 这就是为什么客户端执行第2条命令时，却接收到了第一条命令的结果的原因。 这时有同学说了， 那我直接在客户端把client.recv(1024)改大一点不就好了么， 改成一次接收个100mb,哈哈，这是不行的，因为socket每次接收和发送都有最大数据量限制的，毕竟网络带宽也是有限的呀，不能一次发太多，发送的数据最大量的限制 就是缓冲区能缓存的数据的最大量，这个缓冲区的最大值在不同的系统上是不一样的， 我实在查不到一个具体的数字，但测试的结果是，在linux上最大一次可接收10mb左右的数据，不过官方的建议是不超过8k,也就是8192，并且数据要可以被2整除，不要问为什么 。anyway , 如果一次只能接收最多不超过8192的数据 ，那服务端返回的数据超过了这个数字怎么办呢？比如让服务器端打开一个5mb的文件并返回，客户端怎么才能完整的接受到呢？那就只能(改进七)循环收取啦。
+
+
+在开始解决上面问题3之前，我们要考虑，客户端要循环接收服务器端的大量数据返回直到一条命令的结果全部返回为止， 但问题是客户端知道服务器端返回的数据有多大么？答案是不知道，那既然不知道服务器的要返回多大的数据，那客户端怎么知道要循环接收多少次呢？答案是不知道，擦，那咋办？ 总不能靠猜吧？呵呵。。。 当然不能，那只能让服务器在发送数据之前主动告诉客户端，要发送多少数据给客户端，然后再开始发送数据，yes, 机智如我，搞起。
+
+先简单测试接收数据量大小
+
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+结果输出:<br>/Library/Frameworks/Python.framework/Versions/3.5/bin/python3.5 /Users/jieli/PycharmProjects/python基础/自动化day8socket/sock_client.py
+>>:cat /var/log/system.log
+getting cmd result ,  b'3472816Sep  9 09:06:37 Jies-MacBook-Air kernel[0]: hibernate image path: /var/vm/sleepimage\nSep  9 09:06:37 Jies-MacBook-Air kernel[0]: efi pagecount 65\nSep  9 09:06:37 Jies-MacBook-Air kernel[0]: hibernate_page_list_setall(preflight 1) start\nSep  9 09:06:37 Jies-MacBook-Air kernel[0]: hibernate_page_list_setall time: 211 ms\nSep  9 09:06:37 Jies-MacBook-Air kernel[0]: pages 1211271, wire 225934, act 399265, inact 4, cleaned 0 spec 97, zf 3925, throt 0, compr 218191, xpmapped 40000\nSep  9 09:06:37 Jies-MacBook-Air kernel[0]: could discard act 94063 inact 129292 purgeable 58712 spec 81788 cleaned 0\nSep  9 09:06:37 Jies-MacBook-Air kernel[0]: WARNING: hibernate_page_list_setall skipped 47782 xpmapped pages\nSep  9 09:06:37 Jies-MacBook-Air kernel[0]: hibernate_page_list_setall preflight pageCount 225934 est comp 41 setfile 421527552 min 1073741824\nSep  9 09:06:37 Jies-MacBook-Air kernel[0]: kern_open_file_for_direct_io(0)\nSep  9 09:06:37 Jies-MacBook-Air kernel[0]: kern_open_file_for_direct_io took 181 ms\nSep  9 '
+Traceback (most recent call last):
+  File "/Users/jieli/PycharmProjects/python基础/自动化day8socket/sock_client.py", line 17, in <module>
+    total_rece_size = int(res_return_size)
+ValueError: invalid literal for int() with base 10: b'3472816Sep  9 09:06:37 Jies-MacBook-Air kernel[0]: hibernate image path: /var/vm/sleepimage\nSep  9 09:06:37 Jies-MacBook-Air kernel[0]: efi pagecount 65\nSep  9 09:06:37 Jies-MacBook-Air kernel[0]:
+
+Process finished with exit code 1
+看程序执行报错了， 我在客户端本想只接服务器端命令的执行结果，但实际上却连命令结果也跟着接收了一部分。 这是为什么呢？？？服务器不是只send了结果的大小么？不应该只是个数字么？尼玛命令结果不是第2次send的时候才发送的么？？，擦，擦，擦，价值观都要崩溃了啊。。。。
+
+哈哈，这里就引入了一个重要的概念，“粘包”(测试时，Windows不会，Linux会)， 即服务器端你调用时send 2次，但你send调用时，(问题八)数据其实并没有立刻被发送给客户端，而是放到了系统的socket发送缓冲区里，等缓冲区满了、或者数据等待超时了，数据才会被send到客户端，这样就把好几次的小数据拼成一个大数据，统一发送到客户端了，这么做的目地是为了提高io利用效率，一次性发送总比连发好几次效率高嘛。 但也带来一个问题，就是“粘包”，即2次或多次的数据粘在了一起统一发送了。就是我们上面看到的情况 。
+
+我们在这里必须要想办法把粘包分开， 因为不分开，你就没办法取出来服务器端返回的命令执行结果的大小呀。so ,那怎么分开呢？首先你是没办法让缓冲区强制刷新把数据发给客户端的。 你能做的，只有一个。就是，让缓冲区超时，超时了，系统就不会等缓冲区满了，会直接把数据发走，因为不能一个劲的等后面的数据呀，等太久，会造成数据延迟了，那可是极不好的。so如果(改进八)让缓冲区超时呢？
+
+答案就是：
+
+time.sleep(0.5),经多次测试，让服务器程序sleep 至少0.5就会造成缓冲区超时。哈哈哈， 你会说，擦，这么玩不会被老板开除么，虽然我们觉得0.5s不多，但是对数据实时要求高的业务场景，比如股票交易，过了0.5s 股票价格可以就涨跌很多，搞毛线呀。但没办法，我刚学socket的时候 找不到更好的办法，就是这么玩的，现在想想也真是low呀
+但现在我是有Tesla的男人了，不能再这么low了， 所以推出nb新姿势就是， 不用sleep,服务器端每发送一个数据给客户端，就立刻等待客户端进行回应，即调用 conn.recv(1024), 由于recv在接收不到数据时是阻塞的，这样就会造成，服务器端接收不到客户端的响应，就不会执行后面的conn.sendall(命令结果)的指令，收到客户端响应后，再发送命令结果时，缓冲区就已经被清空了，因为上一次的数据已经被强制发到客户端了。 好机智 ， 看下面代码实现。
+
+
+
+
+标签: socket
+好文要顶 关注我 收藏该文
+前程明亮
+关注 - 5
+粉丝 - 1
+0 0
+« 上一篇：python之面向对象与构造函数

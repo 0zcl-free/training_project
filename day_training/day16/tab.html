@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .tab-box .box-menu{
+            background-color: #adadad;
+            border: 1px solid #dddddd;
+            height: 30px;
+            line-height: 30px;
+        }
+        .tab-box .box-body{
+            border: 1px solid #e7d9b1;
+            background-color: #f4f9e7;
+            height: 50px;
+        }
+        .hide{
+            display: none;
+        }
+        .current_menu{
+            /*background-color: #505aff;*/
+            background-color: white;
+            color: black;
+            border-top: 2px solid red;
+        }
+        .box-menu a{
+            border-right: 1px solid #f8ff89;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab-box">
+        <div class="box-menu">
+            <!--所有菜单-->
+            <a zcl="c1" onclick="ChangeTab(this);" class="current_menu">菜单一</a>
+            <a zcl="c2" onclick="ChangeTab(this);">菜单二</a>
+            <a zcl="c3" onclick="ChangeTab(this);">菜单三</a>
+        </div>
+        <div class="box-body">
+            <!--所有内容-->
+            <div id="c1">内容一</div>
+            <div id="c2" class="hide">内容二</div>
+            <div id="c3" class="hide">内容三</div>
+        </div>
+    </div>
+
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        function ChangeTab(ths) {
+            $(ths).addClass("current_menu").siblings().removeClass("current_menu");
+            //获取当前点击的标签
+            //获取当前标签属性zcl对应的值
+            var content_id = $(ths).attr("zcl");
+            console.log(content_id);
+            var temp = "#" + content_id;
+            //找到与菜单标签对应的内容<div>标签,去除hide样式，并为该div的兄弟标签加上hide样式
+            $(temp).removeClass("hide").siblings().addClass("hide");
+
+        }
+    </script>
+</body>
+</html>

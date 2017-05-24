@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>s3</title>
+</head>
+<body>
+
+    <div>
+        <div id="num">1</div>
+        <!--一点击button，就会执行onclick属性里面的值(eg:某个函数)-->
+        <input type="button" value="+1" onclick="Add()"/>
+    </div>
+
+    <script>
+        function Add() {
+//            alert("hello");
+            var nid = document.getElementById("num");
+            var text = nid.innerText;
+            text = parseInt(text);
+            text += 1;
+            nid.innerText = text;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick='my_function()'>按钮1</button>
+<button onclick='my_function()'>按钮2</button>
+<button onclick='my_function()'>按钮3</button>
+<script>
+function my_function()
+{
+    var str=document.getElementsByTagName('button');
+    console.log(str.length);
+    for(var i=0;i<str.length;i++)
+    {
+        var myfn=function(a)
+        {
+            var c=0;
+            str[a].onclick=function()
+            {
+                c += 1;
+                alert("点击次数为："+c)
+        }
+        }(i)
+    }
+}
+my_function()
+</script>
+</body>
+</html>

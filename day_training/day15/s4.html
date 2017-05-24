@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>s5</title>
+</head>
+<body>
+    <h3><input type="button" onclick="GetValue()" value="获取值"></h3>
+    <input id = "n2" type="text"/>
+    <select id="n3">
+        <option value="1">上海</option>
+        <option value="2">北京</option>
+        <option value="3">广州</option>
+    </select>
+    <textarea id="n4">alex</textarea>
+
+
+    <script type="text/javascript">
+        function GetValue() {
+            var obj = document.getElementById("n4");
+            alert(obj.value);　//获取值
+            //obj.value = "";　　//可对获取的值进行修改　如：清空
+            //obj.value = "2";    //将获取的值修改为２，即北京
+            obj.value = "zcl";
+        }
+
+
+    /*
+    var text = document.getElementById("n1");
+    console.log(text.innerText);   //只取文本内容，取alex而不是<h2>alex</h2>
+    console.log(text.innerHTML);
+    */
+</script>
+
+</body>
+</html>

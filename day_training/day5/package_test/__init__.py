@@ -1,0 +1,1 @@
+print("package_test.__init.py")

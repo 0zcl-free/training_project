@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shuaige</title>
+    <style>
+        /*模态对话框样式*/
+        .modal{
+            position: fixed;
+            left:50%;
+            top:50%;
+            width: 400px;
+            height: 300px;
+            background-color: #dddddd;
+            margin-left: -200px;
+            margin-top: -150px;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <table>
+        <thead></thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td onclick="GetPrev(this)">编辑</td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td>211</td>
+                <td>333</td>
+                <td onclick="GetPrev(this)">编辑</td>
+            </tr>
+            <tr>
+                <td>11111</td>
+                <td>22222</td>
+                <td>33333</td>
+                <td onclick="GetPrev(this)">编辑</td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="dialog" class="modal hide">
+        <form action="" method="get">
+            <p>主机名:<input type="text" id="hostname"/></p>
+            <p>ip地址:<input type="text" id="ip"/></p>
+            <p>主机名:<input type="text" id="port"/></p>
+
+            <!--这里的input,本身有一个事件,我们在给他设置一个事件,并且给他返回值,如果咱们定义的事件返回值为Flase他本身自带的事件就不执行了!-->
+            <!--就不提交了-->
+            <input type="submit"  onclick="return SubmitForm()" value="提交"/>
+            <input type="button" onclick="CanCel()" value="取消"/>
+        </form>
+    </div>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        //当点击时判断用户输入的内容是否为空,如果为空提示
+        function SubmitForm(){
+            //获取form表单中input的值
+            //判断值是否为空
+            var ret = true;
+            //遍历所有的input,要要有控制,就讲ret设置为false
+            //$('input[type="text"]') 找到所有的input标签并且类型为text的标签
+
+            $(':text').each(function () { //找到所有的input标签并且类型为text的标签,找到的是个数组,吧数组赋值给each让他循环
+                //$(this) == 要循环的每一个元素表示当前的元素or标签
+                var value = $(this).val();
+                if(value.trim().length == 0) { //判断取消空格"trim()",之后的字符长度为0,那么执行  注意 == 才是等于 = 是赋值!
+                    $(this).css('border-color','red');
+                    ret = false;
+                }else {
+                    $(this).css('border-color', 'green');
+                }
+                });
+
+            return ret;
+        }
+
+        //当点击时从form表单中的input标签中获取内容并赋值给模态对话框
+        function GetPrev(arg){
+            var list = [];
+            $.each($(arg).prevAll(),function(i) {  //循环$(arg).prevAll()这里的内容,然后把值赋值给 i 这里的function(i)
+                var item = $(arg).prevAll()[i]; //获取值,如果不取获取到的是索引
+                var text = $(item).text(); //取出值然后赋值给text
+                list.push(text)
+            });
+            //反转列表
+            var new_list = list.reverse();
+            //把获取到的值引用到模态对话框中,赋值给value
+            $('#hostname').val(new_list[0]);
+            $('#ip').val(new_list[1]);
+            $('#port').val(new_list[2]);
+
+            $('#dialog').removeClass('hide');
+        }
+
+        //取消的操作,隐藏模态对话框
+        function CanCel() {
+            $('#dialog').addClass('hide')
+        }
+    </script>
+</body>
+</html>

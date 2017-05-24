@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*响应式布局*/
+        /*界面宽度大于600时样式生效*/
+        @media (min-width: 600px) {
+            .lead{
+                background-color: darksalmon;
+            }
+        }
+        .c1:after{
+            content: "sb";
+        }
+        .clearfix:after{
+            content: ".";
+            clear: both;
+            visibility: hidden;
+        }
+        .c2{
+            background-color: darksalmon;
+        }
+    </style>
+</head>
+<body>
+    <div class="lead">zcl</div>
+    <div class="c1">alex</div>
+
+    <div class="c2 clearfix">
+        <div style="float: left;">123</div>
+        <div style="float: left;" >qwe</div>
+    </div>
+    <div class="c2">
+        <div style="float: left;">123</div>
+        <div style="float: left;" >qwe</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div style="border: 1px solid indigo;width: 400px;height: 300px;position: absolute;">
+        <div id="title" style="background-color: black;height: 50px;color: white;">
+            标题
+        </div>
+        <div style="height: 350px;">
+            内容
+        </div>
+    </div>
+
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        $(function () {
+            //页面加载完成之后自动执行
+            $("#title").mouseover(function () {  //给title绑定事件
+                $(this).css("cursor", "move");　　　//this代表title(标题标签)
+            }).mousedown(function (e) {   //链式编程，在jQuery是很流行的；也是对title绑定事件
+                //绑定事件，e为封装了事件的对象，包含很多信息
+                var _event = e || window.event;  //有些浏览器不兼容没给出e,就用window.event
+                var old_x = _event.clientX; //原始鼠标横坐标
+                var old_y = _event.clientY;
+                //框左上角离浏览器界面左边界，顶部的距离
+                var parent_left = $(this).parent().offset().left;
+                var parent_top = $(this).parent().offset().top;
+
+                $(this).bind("mousemove", function (e) {　　//this代表title;为谁绑定事件，$(this)便是谁
+                    var _new_event = e || window.event;
+                    var new_x = _new_event.clientX;  //新的鼠标坐标
+                    var new_y = _new_event.clientY;
+
+                    var x = parent_left + (new_x-old_x);  //移动的横坐标距离
+                    var y = parent_top + (new_y-old_y);
+
+                    $(this).parent().css("left", x+'px');　　//this仍代表title
+                    $(this).parent().css("top", y+'px');
+                })
+            }).mouseup(function () {  //鼠标一放开(不点击)，则取消绑定移动事件
+                    $(this).unbind("mousemove");
+                })
+        })
+    </script>
+</body>
+</html>

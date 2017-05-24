@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        function func() {
+            
+        }
+
+
+        //　特殊事件: 当前文档树准备就绪，就绑定函数里面的事件 eg:请求图片，
+        // 一旦放图片的框准备好就执行JS，不用等到图片加载完成再执行
+        $(document).ready(function () {
+            //方式一
+        });
+        $(function () {
+            //方式二
+            /*
+            //最基本的jQuery事件绑定
+            $("li").click(function () { //为所有的li标签绑定一个事件，一点击就执行
+                var temp = $(this).text();
+                alert(temp);
+            });
+            */
+            /*
+            //<div onclick="func();"></div>　　　//绑定事件的方式一：一刷新就找到标签并绑定
+            //给ul里面的li绑定一个click事件，一点则执行
+            //绑定事件的方式二：默认不绑定，什么时候触发什么时候绑定并立马执行，效率高
+            $("ul").delegate("li", "click", function () {
+                var temp = $(this).text();
+                alert(temp);
+            })；
+            */
+            //绑定事件方式三：给所有的li标签绑定click事件　//绑定事件的方式一：一刷新就找到标签并绑定
+            $("li").bind("click", function () {
+                var temp = $(this).text();
+                alert(temp);
+            });
+        })
+
+    </script>
+</body>
+</html>

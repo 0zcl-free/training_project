@@ -1,0 +1,5 @@
+num = (1, 3, 45, 89, 45, 34)
+num.count(3)
+num.index(3)
+print(num.count(3))
+print(num.index(3))

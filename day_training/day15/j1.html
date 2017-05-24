@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>j1</title>
+</head>
+<body>
+    <div id="n1">aaa</div>
+    <div class="c1">123</div>
+    <div class="c1">qwe</div>
+    <span id="n2">bbb</span>
+
+    <div id="n4">
+        <div>
+            <div class="c3">
+                <span>
+                    <a>haha</a>
+                </span>
+            </div>
+        </div>
+        <span>zzzzz</span>
+    </div>
+
+
+    <!--引入jquery-->
+    <script src="jquery-3.1.1.min.js"></script>
+
+    <script>
+//        $=jQuery 相当于一个对象
+        $("#n1").text("zcl");     //$("#n1")表示去找id为n1的标签
+        $("div").text("xxoo");     //找到所有的div标签并修改内容
+        $(".c1").text("hello");   //$(".c1")表示找所有class=c1的标签
+        //用逗号分割，表示找到所有class=c1,所有a标签，所有id=n2的标签并修改它们的内容
+        $(".c1,a,#n2").text("OK");
+
+        //表示id为n4的标签下的所有div标签，div标签下的所有class=c3,...
+        $('#n4 div .c3 span a').text('kkkk');  //也可以用$('#n4 a').text('kkkk');
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="button" onclick="AjaxRequest()" value="跨域Ajax" />
+
+
+<div id="container"></div>
+
+<script src="jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function AjaxRequest() {
+            $.ajax({
+                url: 'http://www.jxntv.cn/data/jmd-jxtv2.html?callback=list&_=1454376870403',
+                type: 'GET',
+                dataType: 'jsonp',
+                jsonp: 'callback',
+                jsonpCallback: 'list',
+
+                success: function (arg) {
+                    //当请求执行完成之后，自动调用，arg(参数):服务器返回的数据
+                    //arg = {data: xxx}
+                    //jsonpdic为字典，jsonpdic有两个元素，一个是week:xx；另一个是list列表，包含周几相关的信息
+                    var jsonpdic = arg.data;
+                    //k为列表(里面为星期Ｘ对应的内容)，v为一个字典{week:xx}
+                    $.each(jsonpdic, function (k, v) {
+                        var week = v.week;　　//获得星期几，并将其拼接成h1标签，并append到div标签
+                        var temp = "<h1>" + week + "</h1>";
+                        $('#container').append(temp);
+                        //获得key为list所对应的value(包含相关信息)；listArray为列表，里面元素为字典形式
+                        var listArray = v.list;
+                        $.each(listArray, function (kk,vv) {
+                            var link = vv.link;
+                            var name = vv.name;
+                            //a标签是没有换行的，所以在后面加上<br/>
+                            var tempNex = "<a href='" + link + "'>" + name + "</a><br/>"
+                            $('#container').append(tempNex);
+                        })
+                    })
+                }
+            });
+        }
+
+</script>
+</body>
+</html>

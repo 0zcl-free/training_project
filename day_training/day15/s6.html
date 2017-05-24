@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>s6</title>
+</head>
+<body>
+    <div id="container"></div>
+    <!--先执行自定义事件onclik，再执行默认事件href-->
+    <!--要想执行完onclick事件后不执行href，只需在onclick内返回False-->
+    <a href="http://www.cnblogs.com/0zcl/" target="_blank" onclick="return AddElement();">添加</a>
+
+    <script>
+
+        function AddElement() {
+            /*
+            var nid = document.getElementById("container");
+            var tag = "<input type='text'/>";
+//            nid.innerHTML = tag;   //能创建input标签，但只能创建一个。
+            //每点击一次，将新添加标签到后面
+            container.insertAdjacentHTML("beforeBegin", tag);
+            */
+
+            //创建a标签并拿到其对象
+            var createObj = document.createElement("a");
+            createObj.href = "http://www.cnblogs.com/0zcl/";
+            createObj.innerText = "前程明亮博客";
+            console.log(createObj);
+            //对于一个标签对象，能否通过innerText往里添加
+            //发现不行，添加的只是href
+            var nid = document.getElementById("container");
+//            nid.innerText = createObj;
+            nid.appendChild(createObj);
+
+            return false;
+        }
+    </script>
+
+</body>
+</html>

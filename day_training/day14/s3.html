@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>实例1</title>
+    </head>
+    <body>
+        <div style="height: 50px;background-color: blue">头部</div>
+        <div style="background-color: #ddd;">
+            <div style="width: 20%;float: left;height:500px;background-color:yellow;">左边内容</div>
+            <div style="width: 80%;float: left;height:500px;background-color:white;">
+                <h3>Form表单提交</h3>
+                <form action="http://www.baidu.com" enctype="multipart/form-data" method="post">
+                    <p>
+                        <input type="text" name="host"/>
+                        <input type="password" name="pwd"/>
+                    </p>
+                    <div style="background-color: rosybrown;color: white;">
+                        <h3>爱好</h3>
+                        吉他:<input name="favor" type="checkbox" value="1"/>
+                        钢琴:<input name="favor" type="checkbox" value="2"/>
+                        贝斯:<input name="favor" type="checkbox" value="3"/>
+                    </div>
+                    <div>
+                        <h4>性别</h4>
+                        男:<input name="gender" type="radio" value="1" />
+                        女:<input name="gender" type="radio" value="0" />
+                    </div>
+                    <div>
+                        <h3>城市</h3>
+                        <select name="city">
+                            <option value="666">北京</option>
+                            <option value="777">杭州</option>
+                            <option value="888">上海</option>
+                        </select>
+                    </div>
+                    <div>
+                        <textarea name="mono"></textarea>
+                    </div>
+                    <div>
+                        <h4>文件上传</h4>
+                        <input name="file_name" type="file" />
+                    </div>
+                    <hr />
+                    <input type="submit" value="提交" />
+
+                </form>
+
+            </div>
+        </div>
+    </body>
+</html>
